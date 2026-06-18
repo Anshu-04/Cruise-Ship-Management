@@ -1,0 +1,23 @@
+import mongoose from "mongoose";
+
+const stationeryItemSchema = new mongoose.Schema({
+  name: {
+    type: String,
+    required: true,
+  },
+  description: {
+    type: String,
+    required: true,
+  },
+  price: {
+    type: Number,
+    required: true,
+  },
+  image: {
+    type: String,
+    required: true,
+  },
+}, { timestamps: true });
+
+const StationeryItem = mongoose.model("StationeryItem", stationeryItemSchema);
+export default StationeryItem;
